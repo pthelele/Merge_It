@@ -114,7 +114,8 @@ public class Merge_Files {
     
 	public void rotateFile(OutputStream outputStream) throws Exception
 	{
-		
+		// New Unmattering comments.
+		//The method will  have to return the rotated file in pdf format.
 	}
 }
 
