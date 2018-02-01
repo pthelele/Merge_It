@@ -1,2 +1,2 @@
 # Merge_It
-A document merge application for Tutuka.
+A document merge application with Java
