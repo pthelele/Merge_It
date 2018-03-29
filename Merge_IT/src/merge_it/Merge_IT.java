@@ -14,6 +14,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 /**
@@ -108,7 +109,11 @@ public class Merge_IT extends javax.swing.JFrame {
 
 
         //Prepare output stream for merged pdf file.
-        OutputStream outputStream = new FileOutputStream(".\\MergeFile_1234.pdf");
+        JFileChooser fileLocation = new JFileChooser();
+        fileLocation.showSaveDialog(this);
+        String fileName;
+        String saveFilePath = ".\\";
+        OutputStream outputStream = new FileOutputStream(fileName = (!merge.filechooser().trim().isEmpty()) ? merge.filechooser() : ".\\MergeFile_1234.pdf");
 
         //call method to merge pdf files.
         merge.mergePdfFiles(inputPdfList, outputStream);  

@@ -29,10 +29,29 @@ public class Merge_Files {
     {
        
         JFileChooser fileDir = new JFileChooser();
+        fileDir.setDialogTitle("Choose file to Merge");
         fileDir.showOpenDialog(null);
         File file = fileDir.getSelectedFile();
        
         return file.getAbsolutePath(); 
+    }
+    
+    public String fileSaver()
+    {
+        JFileChooser fileLocation = new JFileChooser();
+        fileLocation.setDialogTitle("Save File As");
+        int returnValue = fileLocation.showSaveDialog(null);
+        if(returnValue == JFileChooser.APPROVE_OPTION)
+        {
+            File file = fileLocation.getSelectedFile();
+            return file.getName();
+        }
+        else
+        {
+            return "Merge_1234.pdf";
+        }
+        
+        
     }
     
     public void mergePdfFiles(ArrayList<InputStream> inputPdfList,OutputStream outputStream) throws Exception

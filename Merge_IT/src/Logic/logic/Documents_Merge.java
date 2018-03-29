@@ -1,6 +1,6 @@
 
 
-package Logic.logic;
+/*package Logic.logic;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.pdf.PdfContentByte;
@@ -39,5 +39,10 @@ public static void main(String args[]){
         e.printStackTrace();
     }
     }
+
+    private static void mergePdfFiles(ArrayList<InputStream> inputPdfList, OutputStream outputStream) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
+*/
