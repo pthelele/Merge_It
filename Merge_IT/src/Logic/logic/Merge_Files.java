@@ -131,12 +131,12 @@ public class Merge_Files {
     
 	//New PDF rotator coming soon.
     
-	public void rotateFile(OutputStream outputStream) throws Exception
+	public void rotateFile(PDFDocument document, int pageNumber) throws Exception
 	{
-		// New Unmattering comments.
-		//The method will  have to return the rotated file in pdf format.
-		//Merger file now... whats going on now.
-		//Merger file now... whats going on now.1234
+		PDFPage page = document.getPage(int);
+        page.setRotation(90);
+        document.print(new PrintSettings());
+        document.saveDocument("C:\\users\\pale\\rotate.pdf");
 	}
 }
 
