@@ -133,10 +133,11 @@ public class Merge_Files {
     
 	public void rotateFile(PDFDocument document, int pageNumber) throws Exception
 	{
-		PDFPage page = document.getPage(int);
+        String userName = System.getProperty("user.name");
+        PDFPage page = document.getPage(int);
         page.setRotation(90);
         document.print(new PrintSettings());
-        document.saveDocument("C:\\users\\pale\\rotate.pdf");
+        document.saveDocument("C:\\users\\"+ userName+ "\\rotate.pdf");
 	}
 }
 
